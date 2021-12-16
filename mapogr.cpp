@@ -4227,11 +4227,11 @@ static int msOGRLayerIsOpen(layerObj *layer)
   return MS_FALSE;
 }
 
-int msOGRIsSpatialite(layerObj* layer)
+int msOGRSupportsIsNull(layerObj* layer)
 {
   msOGRFileInfo *psInfo =(msOGRFileInfo*)layer->layerinfo;
   if (psInfo && psInfo->dialect &&
-      EQUAL(psInfo->dialect, "Spatialite") )
+      (EQUAL(psInfo->dialect, "Spatialite") || EQUAL(psInfo->dialect, "GPKG")))
   {
     // reasons to not produce native string: not simple layer, or an explicit deny
     char *do_this = msLayerGetProcessingKey(layer, "NATIVE_SQL"); // default is YES
