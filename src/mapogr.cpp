@@ -2226,7 +2226,7 @@ static int msOGRFileWhichShapes(layerObj *layer, rectObj rect,
      * ------------------------------------------------------------------ */
     if (psInfo->rect_is_defined) {
       rect.minx = std::max(psInfo->rect.minx, rect.minx);
-      rect.miny = std::max((psInfo->rect.miny, rect.miny);
+      rect.miny = std::max(psInfo->rect.miny, rect.miny);
       rect.maxx = std::min(psInfo->rect.maxx, rect.maxx);
       rect.maxy = std::min(psInfo->rect.maxy, rect.maxy);
       bIsValidRect = true;
