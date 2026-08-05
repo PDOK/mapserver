@@ -2761,9 +2761,9 @@ int FLTParseGMLBox(CPLXMLNode *psBox, rectObj *psBbox, char **ppszSRS) {
             bCoordinatesValid = 1;
           } else {
             msSetError(
-              MS_MISCERR,
-              "Invalid (NaN or infinite) coordinate values in bounding box.",
-              "FLTParseGMLBox()");
+                MS_MISCERR,
+                "Invalid (NaN or infinite) coordinate values in bounding box.",
+                "FLTParseGMLBox()");
           }
         }
 
