@@ -4643,13 +4643,15 @@ this request. Check wcs/ows_enable_request settings.",
               MS_MIN(subsetInImageProj.maxy, layer->extent.maxy);
           {
             double total = std::abs(layer->extent.maxx - layer->extent.minx);
-            double part = std::abs(subsetInImageProj.maxx - subsetInImageProj.minx);
+            double part =
+                std::abs(subsetInImageProj.maxx - subsetInImageProj.minx);
             widthFromComputationInImageCRS =
                 MS_NINT((part * map->width) / total);
           }
           {
             double total = std::abs(layer->extent.maxy - layer->extent.miny);
-            double part = std::abs(subsetInImageProj.maxy - subsetInImageProj.miny);
+            double part =
+                std::abs(subsetInImageProj.maxy - subsetInImageProj.miny);
             heightFromComputationInImageCRS =
                 MS_NINT((part * map->height) / total);
           }
