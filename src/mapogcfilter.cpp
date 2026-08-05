@@ -2755,7 +2755,7 @@ int FLTParseGMLBox(CPLXMLNode *psBox, rectObj *psBbox, char **ppszSRS) {
           miny = atof(papszMin[1]);
           maxx = atof(papszMax[0]);
           maxy = atof(papszMax[1]);
-          
+
           if (std::isfinite(minx) && std::isfinite(miny) &&
               std::isfinite(maxx) && std::isfinite(maxy)) {
             bCoordinatesValid = 1;
